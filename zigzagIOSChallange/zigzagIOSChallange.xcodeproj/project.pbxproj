@@ -1,0 +1,884 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04481A4B26924D03007C9302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481A4A26924D03007C9302 /* AppDelegate.swift */; };
+		04481A4D26924D03007C9302 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481A4C26924D03007C9302 /* SceneDelegate.swift */; };
+		04481A4F26924D03007C9302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481A4E26924D03007C9302 /* ViewController.swift */; };
+		04481A5226924D03007C9302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04481A5026924D03007C9302 /* Main.storyboard */; };
+		04481A5426924D07007C9302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04481A5326924D07007C9302 /* Assets.xcassets */; };
+		04481A5726924D07007C9302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04481A5526924D07007C9302 /* LaunchScreen.storyboard */; };
+		04481A6226924D08007C9302 /* zigzagIOSChallangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481A6126924D08007C9302 /* zigzagIOSChallangeTests.swift */; };
+		04481A6D26924D08007C9302 /* zigzagIOSChallangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481A6C26924D08007C9302 /* zigzagIOSChallangeUITests.swift */; };
+		04481A8726924EBC007C9302 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481A8526924EBC007C9302 /* NetworkRouter.swift */; };
+		04481A8826924EBC007C9302 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481A8626924EBC007C9302 /* NetworkLayer.swift */; };
+		04481A9526925B83007C9302 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481A9426925B83007C9302 /* State.swift */; };
+		04481A9B269269E6007C9302 /* LinesPostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481A9A269269E6007C9302 /* LinesPostRequest.swift */; };
+		04481AA026926A55007C9302 /* LinesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481A9F26926A55007C9302 /* LinesResponse.swift */; };
+		04481AA926931C1D007C9302 /* LinesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AA826931C1D007C9302 /* LinesDetailsViewController.swift */; };
+		04481AAE26931C3F007C9302 /* LinesDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AAD26931C3F007C9302 /* LinesDetailsPresenter.swift */; };
+		04481AB326931C5A007C9302 /* LinesDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AB226931C5A007C9302 /* LinesDetailsInteractor.swift */; };
+		04481AB826931CB0007C9302 /* LinesDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AB726931CB0007C9302 /* LinesDetailsProtocols.swift */; };
+		04481ABD2693266A007C9302 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481ABC26932669007C9302 /* Router.swift */; };
+		04481ACA26935345007C9302 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04481AC826935345007C9302 /* CardViewController.xib */; };
+		04481AD526935CB2007C9302 /* TransportationCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04481AD326935CB2007C9302 /* TransportationCategoryView.xib */; };
+		04481AD626935CB2007C9302 /* TransportationCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AD426935CB2007C9302 /* TransportationCategoryViewController.swift */; };
+		04481AE426936551007C9302 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AE326936551007C9302 /* CardViewController.swift */; };
+		04481AFC26936894007C9302 /* LineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AFB26936894007C9302 /* LineTableViewCell.swift */; };
+		04481B0126936D88007C9302 /* RedVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481B0026936D88007C9302 /* RedVIewController.swift */; };
+		04481B062693B668007C9302 /* LinesDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481B052693B668007C9302 /* LinesDetailsModels.swift */; };
+		4B38F9AA4468A6AC74E59206 /* Pods_zigzagIOSChallange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B858B967A09B0E4E910BD3 /* Pods_zigzagIOSChallange.framework */; };
+		4D420DEF980FDAD34F44E30F /* Pods_zigzagIOSChallange_zigzagIOSChallangeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669649880525FC2E4D061E1E /* Pods_zigzagIOSChallange_zigzagIOSChallangeUITests.framework */; };
+		65DB19D857835A72AA709AFA /* Pods_zigzagIOSChallangeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3FE5D50EBD870EA116B1D /* Pods_zigzagIOSChallangeTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04481A5E26924D08007C9302 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04481A3F26924D03007C9302 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04481A4626924D03007C9302;
+			remoteInfo = zigzagIOSChallange;
+		};
+		04481A6926924D08007C9302 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04481A3F26924D03007C9302 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04481A4626924D03007C9302;
+			remoteInfo = zigzagIOSChallange;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04481A4726924D03007C9302 /* zigzagIOSChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zigzagIOSChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04481A4A26924D03007C9302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04481A4C26924D03007C9302 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		04481A4E26924D03007C9302 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04481A5126924D03007C9302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04481A5326924D07007C9302 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04481A5626924D07007C9302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04481A5826924D07007C9302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04481A5D26924D08007C9302 /* zigzagIOSChallangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zigzagIOSChallangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04481A6126924D08007C9302 /* zigzagIOSChallangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zigzagIOSChallangeTests.swift; sourceTree = "<group>"; };
+		04481A6326924D08007C9302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04481A6826924D08007C9302 /* zigzagIOSChallangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zigzagIOSChallangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04481A6C26924D08007C9302 /* zigzagIOSChallangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zigzagIOSChallangeUITests.swift; sourceTree = "<group>"; };
+		04481A6E26924D08007C9302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04481A8526924EBC007C9302 /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		04481A8626924EBC007C9302 /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		04481A9426925B83007C9302 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		04481A9A269269E6007C9302 /* LinesPostRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesPostRequest.swift; sourceTree = "<group>"; };
+		04481A9F26926A55007C9302 /* LinesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesResponse.swift; sourceTree = "<group>"; };
+		04481AA826931C1D007C9302 /* LinesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesDetailsViewController.swift; sourceTree = "<group>"; };
+		04481AAD26931C3F007C9302 /* LinesDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesDetailsPresenter.swift; sourceTree = "<group>"; };
+		04481AB226931C5A007C9302 /* LinesDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesDetailsInteractor.swift; sourceTree = "<group>"; };
+		04481AB726931CB0007C9302 /* LinesDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesDetailsProtocols.swift; sourceTree = "<group>"; };
+		04481ABC26932669007C9302 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		04481AC826935345007C9302 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		04481AD326935CB2007C9302 /* TransportationCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransportationCategoryView.xib; sourceTree = "<group>"; };
+		04481AD426935CB2007C9302 /* TransportationCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportationCategoryViewController.swift; sourceTree = "<group>"; };
+		04481AE326936551007C9302 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		04481AFB26936894007C9302 /* LineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTableViewCell.swift; sourceTree = "<group>"; };
+		04481B0026936D88007C9302 /* RedVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedVIewController.swift; sourceTree = "<group>"; };
+		04481B052693B668007C9302 /* LinesDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesDetailsModels.swift; sourceTree = "<group>"; };
+		0F640063549EA4A927CFDE04 /* Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.debug.xcconfig"; path = "Target Support Files/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		52B858B967A09B0E4E910BD3 /* Pods_zigzagIOSChallange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zigzagIOSChallange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57A3FE5D50EBD870EA116B1D /* Pods_zigzagIOSChallangeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zigzagIOSChallangeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61272E35D45054D89F78EC1D /* Pods-zigzagIOSChallangeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zigzagIOSChallangeTests.release.xcconfig"; path = "Target Support Files/Pods-zigzagIOSChallangeTests/Pods-zigzagIOSChallangeTests.release.xcconfig"; sourceTree = "<group>"; };
+		669649880525FC2E4D061E1E /* Pods_zigzagIOSChallange_zigzagIOSChallangeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zigzagIOSChallange_zigzagIOSChallangeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A49759AA3ECED614F321BA4 /* Pods-zigzagIOSChallange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zigzagIOSChallange.debug.xcconfig"; path = "Target Support Files/Pods-zigzagIOSChallange/Pods-zigzagIOSChallange.debug.xcconfig"; sourceTree = "<group>"; };
+		A42939F407BA68557A624368 /* Pods-zigzagIOSChallange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zigzagIOSChallange.release.xcconfig"; path = "Target Support Files/Pods-zigzagIOSChallange/Pods-zigzagIOSChallange.release.xcconfig"; sourceTree = "<group>"; };
+		F794390C88AD0AE57F99BC11 /* Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.release.xcconfig"; path = "Target Support Files/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FF0E81F520D00F3C6941A204 /* Pods-zigzagIOSChallangeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zigzagIOSChallangeTests.debug.xcconfig"; path = "Target Support Files/Pods-zigzagIOSChallangeTests/Pods-zigzagIOSChallangeTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04481A4426924D03007C9302 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B38F9AA4468A6AC74E59206 /* Pods_zigzagIOSChallange.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04481A5A26924D08007C9302 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65DB19D857835A72AA709AFA /* Pods_zigzagIOSChallangeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04481A6526924D08007C9302 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D420DEF980FDAD34F44E30F /* Pods_zigzagIOSChallange_zigzagIOSChallangeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04481A3E26924D03007C9302 = {
+			isa = PBXGroup;
+			children = (
+				04481A4926924D03007C9302 /* zigzagIOSChallange */,
+				04481A6026924D08007C9302 /* zigzagIOSChallangeTests */,
+				04481A6B26924D08007C9302 /* zigzagIOSChallangeUITests */,
+				04481A4826924D03007C9302 /* Products */,
+				BBDC30D37E8A251F05103BBC /* Pods */,
+				E3531CF389866CAE1D0ADB59 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04481A4826924D03007C9302 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04481A4726924D03007C9302 /* zigzagIOSChallange.app */,
+				04481A5D26924D08007C9302 /* zigzagIOSChallangeTests.xctest */,
+				04481A6826924D08007C9302 /* zigzagIOSChallangeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04481A4926924D03007C9302 /* zigzagIOSChallange */ = {
+			isa = PBXGroup;
+			children = (
+				04481AC126932680007C9302 /* Coordinator */,
+				04481A9926926950007C9302 /* Models */,
+				04481A8026924DB3007C9302 /* Mangers */,
+				04481A7E26924D3F007C9302 /* App */,
+				04481A7D26924D2D007C9302 /* Sences */,
+				04481A4C26924D03007C9302 /* SceneDelegate.swift */,
+				04481A4E26924D03007C9302 /* ViewController.swift */,
+				04481A5026924D03007C9302 /* Main.storyboard */,
+				04481A5326924D07007C9302 /* Assets.xcassets */,
+				04481A5526924D07007C9302 /* LaunchScreen.storyboard */,
+				04481A5826924D07007C9302 /* Info.plist */,
+			);
+			path = zigzagIOSChallange;
+			sourceTree = "<group>";
+		};
+		04481A6026924D08007C9302 /* zigzagIOSChallangeTests */ = {
+			isa = PBXGroup;
+			children = (
+				04481A6126924D08007C9302 /* zigzagIOSChallangeTests.swift */,
+				04481A6326924D08007C9302 /* Info.plist */,
+			);
+			path = zigzagIOSChallangeTests;
+			sourceTree = "<group>";
+		};
+		04481A6B26924D08007C9302 /* zigzagIOSChallangeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04481A6C26924D08007C9302 /* zigzagIOSChallangeUITests.swift */,
+				04481A6E26924D08007C9302 /* Info.plist */,
+			);
+			path = zigzagIOSChallangeUITests;
+			sourceTree = "<group>";
+		};
+		04481A7D26924D2D007C9302 /* Sences */ = {
+			isa = PBXGroup;
+			children = (
+				04481AA726927170007C9302 /* LinesDetails */,
+			);
+			path = Sences;
+			sourceTree = "<group>";
+		};
+		04481A7E26924D3F007C9302 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				04481A4A26924D03007C9302 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		04481A8026924DB3007C9302 /* Mangers */ = {
+			isa = PBXGroup;
+			children = (
+				04481A8426924E9B007C9302 /* NetworkManger */,
+			);
+			path = Mangers;
+			sourceTree = "<group>";
+		};
+		04481A8426924E9B007C9302 /* NetworkManger */ = {
+			isa = PBXGroup;
+			children = (
+				04481A8626924EBC007C9302 /* NetworkLayer.swift */,
+				04481A8526924EBC007C9302 /* NetworkRouter.swift */,
+				04481A9426925B83007C9302 /* State.swift */,
+			);
+			path = NetworkManger;
+			sourceTree = "<group>";
+		};
+		04481A9926926950007C9302 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04481A9A269269E6007C9302 /* LinesPostRequest.swift */,
+				04481A9F26926A55007C9302 /* LinesResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04481AA726927170007C9302 /* LinesDetails */ = {
+			isa = PBXGroup;
+			children = (
+				04481ACF2693534B007C9302 /* Views */,
+				04481AA826931C1D007C9302 /* LinesDetailsViewController.swift */,
+				04481AAD26931C3F007C9302 /* LinesDetailsPresenter.swift */,
+				04481AB226931C5A007C9302 /* LinesDetailsInteractor.swift */,
+				04481AB726931CB0007C9302 /* LinesDetailsProtocols.swift */,
+				04481B052693B668007C9302 /* LinesDetailsModels.swift */,
+			);
+			path = LinesDetails;
+			sourceTree = "<group>";
+		};
+		04481AC126932680007C9302 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				04481ABC26932669007C9302 /* Router.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		04481ACF2693534B007C9302 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04481AD326935CB2007C9302 /* TransportationCategoryView.xib */,
+				04481AD426935CB2007C9302 /* TransportationCategoryViewController.swift */,
+				04481AC826935345007C9302 /* CardViewController.xib */,
+				04481AE326936551007C9302 /* CardViewController.swift */,
+				04481AFB26936894007C9302 /* LineTableViewCell.swift */,
+				04481B0026936D88007C9302 /* RedVIewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BBDC30D37E8A251F05103BBC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A49759AA3ECED614F321BA4 /* Pods-zigzagIOSChallange.debug.xcconfig */,
+				A42939F407BA68557A624368 /* Pods-zigzagIOSChallange.release.xcconfig */,
+				0F640063549EA4A927CFDE04 /* Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.debug.xcconfig */,
+				F794390C88AD0AE57F99BC11 /* Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.release.xcconfig */,
+				FF0E81F520D00F3C6941A204 /* Pods-zigzagIOSChallangeTests.debug.xcconfig */,
+				61272E35D45054D89F78EC1D /* Pods-zigzagIOSChallangeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E3531CF389866CAE1D0ADB59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52B858B967A09B0E4E910BD3 /* Pods_zigzagIOSChallange.framework */,
+				669649880525FC2E4D061E1E /* Pods_zigzagIOSChallange_zigzagIOSChallangeUITests.framework */,
+				57A3FE5D50EBD870EA116B1D /* Pods_zigzagIOSChallangeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04481A4626924D03007C9302 /* zigzagIOSChallange */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04481A7126924D08007C9302 /* Build configuration list for PBXNativeTarget "zigzagIOSChallange" */;
+			buildPhases = (
+				0F772A97AF1A2881A1D88066 /* [CP] Check Pods Manifest.lock */,
+				04481A4326924D03007C9302 /* Sources */,
+				04481A4426924D03007C9302 /* Frameworks */,
+				04481A4526924D03007C9302 /* Resources */,
+				CC62C30740EA4F098CFF0212 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zigzagIOSChallange;
+			productName = zigzagIOSChallange;
+			productReference = 04481A4726924D03007C9302 /* zigzagIOSChallange.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04481A5C26924D08007C9302 /* zigzagIOSChallangeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04481A7426924D08007C9302 /* Build configuration list for PBXNativeTarget "zigzagIOSChallangeTests" */;
+			buildPhases = (
+				D546371C873A108E38C2525E /* [CP] Check Pods Manifest.lock */,
+				04481A5926924D08007C9302 /* Sources */,
+				04481A5A26924D08007C9302 /* Frameworks */,
+				04481A5B26924D08007C9302 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04481A5F26924D08007C9302 /* PBXTargetDependency */,
+			);
+			name = zigzagIOSChallangeTests;
+			productName = zigzagIOSChallangeTests;
+			productReference = 04481A5D26924D08007C9302 /* zigzagIOSChallangeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04481A6726924D08007C9302 /* zigzagIOSChallangeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04481A7726924D08007C9302 /* Build configuration list for PBXNativeTarget "zigzagIOSChallangeUITests" */;
+			buildPhases = (
+				C6367C4733642347A1B70832 /* [CP] Check Pods Manifest.lock */,
+				04481A6426924D08007C9302 /* Sources */,
+				04481A6526924D08007C9302 /* Frameworks */,
+				04481A6626924D08007C9302 /* Resources */,
+				5B8C3FD1B6A116AB55C6A79C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04481A6A26924D08007C9302 /* PBXTargetDependency */,
+			);
+			name = zigzagIOSChallangeUITests;
+			productName = zigzagIOSChallangeUITests;
+			productReference = 04481A6826924D08007C9302 /* zigzagIOSChallangeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04481A3F26924D03007C9302 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					04481A4626924D03007C9302 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					04481A5C26924D08007C9302 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 04481A4626924D03007C9302;
+					};
+					04481A6726924D08007C9302 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 04481A4626924D03007C9302;
+					};
+				};
+			};
+			buildConfigurationList = 04481A4226924D03007C9302 /* Build configuration list for PBXProject "zigzagIOSChallange" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04481A3E26924D03007C9302;
+			productRefGroup = 04481A4826924D03007C9302 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04481A4626924D03007C9302 /* zigzagIOSChallange */,
+				04481A5C26924D08007C9302 /* zigzagIOSChallangeTests */,
+				04481A6726924D08007C9302 /* zigzagIOSChallangeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04481A4526924D03007C9302 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04481ACA26935345007C9302 /* CardViewController.xib in Resources */,
+				04481AD526935CB2007C9302 /* TransportationCategoryView.xib in Resources */,
+				04481A5726924D07007C9302 /* LaunchScreen.storyboard in Resources */,
+				04481A5426924D07007C9302 /* Assets.xcassets in Resources */,
+				04481A5226924D03007C9302 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04481A5B26924D08007C9302 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04481A6626924D08007C9302 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F772A97AF1A2881A1D88066 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zigzagIOSChallange-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B8C3FD1B6A116AB55C6A79C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6367C4733642347A1B70832 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC62C30740EA4F098CFF0212 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zigzagIOSChallange/Pods-zigzagIOSChallange-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zigzagIOSChallange/Pods-zigzagIOSChallange-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zigzagIOSChallange/Pods-zigzagIOSChallange-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D546371C873A108E38C2525E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zigzagIOSChallangeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04481A4326924D03007C9302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04481AA026926A55007C9302 /* LinesResponse.swift in Sources */,
+				04481AAE26931C3F007C9302 /* LinesDetailsPresenter.swift in Sources */,
+				04481A4F26924D03007C9302 /* ViewController.swift in Sources */,
+				04481AD626935CB2007C9302 /* TransportationCategoryViewController.swift in Sources */,
+				04481A8726924EBC007C9302 /* NetworkRouter.swift in Sources */,
+				04481AB826931CB0007C9302 /* LinesDetailsProtocols.swift in Sources */,
+				04481B0126936D88007C9302 /* RedVIewController.swift in Sources */,
+				04481AB326931C5A007C9302 /* LinesDetailsInteractor.swift in Sources */,
+				04481A9B269269E6007C9302 /* LinesPostRequest.swift in Sources */,
+				04481AE426936551007C9302 /* CardViewController.swift in Sources */,
+				04481B062693B668007C9302 /* LinesDetailsModels.swift in Sources */,
+				04481A4B26924D03007C9302 /* AppDelegate.swift in Sources */,
+				04481A8826924EBC007C9302 /* NetworkLayer.swift in Sources */,
+				04481A4D26924D03007C9302 /* SceneDelegate.swift in Sources */,
+				04481A9526925B83007C9302 /* State.swift in Sources */,
+				04481AFC26936894007C9302 /* LineTableViewCell.swift in Sources */,
+				04481AA926931C1D007C9302 /* LinesDetailsViewController.swift in Sources */,
+				04481ABD2693266A007C9302 /* Router.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04481A5926924D08007C9302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04481A6226924D08007C9302 /* zigzagIOSChallangeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04481A6426924D08007C9302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04481A6D26924D08007C9302 /* zigzagIOSChallangeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04481A5F26924D08007C9302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04481A4626924D03007C9302 /* zigzagIOSChallange */;
+			targetProxy = 04481A5E26924D08007C9302 /* PBXContainerItemProxy */;
+		};
+		04481A6A26924D08007C9302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04481A4626924D03007C9302 /* zigzagIOSChallange */;
+			targetProxy = 04481A6926924D08007C9302 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04481A5026924D03007C9302 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04481A5126924D03007C9302 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04481A5526924D07007C9302 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04481A5626924D07007C9302 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04481A6F26924D08007C9302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04481A7026924D08007C9302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04481A7226924D08007C9302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A49759AA3ECED614F321BA4 /* Pods-zigzagIOSChallange.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2TWK9B748;
+				INFOPLIST_FILE = zigzagIOSChallange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AmrsTests.test.zigzagIOSChallange;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04481A7326924D08007C9302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A42939F407BA68557A624368 /* Pods-zigzagIOSChallange.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2TWK9B748;
+				INFOPLIST_FILE = zigzagIOSChallange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AmrsTests.test.zigzagIOSChallange;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04481A7526924D08007C9302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF0E81F520D00F3C6941A204 /* Pods-zigzagIOSChallangeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2TWK9B748;
+				INFOPLIST_FILE = zigzagIOSChallangeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AmrsTests.test.zigzagIOSChallangeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zigzagIOSChallange.app/zigzagIOSChallange";
+			};
+			name = Debug;
+		};
+		04481A7626924D08007C9302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61272E35D45054D89F78EC1D /* Pods-zigzagIOSChallangeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2TWK9B748;
+				INFOPLIST_FILE = zigzagIOSChallangeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AmrsTests.test.zigzagIOSChallangeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zigzagIOSChallange.app/zigzagIOSChallange";
+			};
+			name = Release;
+		};
+		04481A7826924D08007C9302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F640063549EA4A927CFDE04 /* Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2TWK9B748;
+				INFOPLIST_FILE = zigzagIOSChallangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AmrsTests.test.zigzagIOSChallangeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = zigzagIOSChallange;
+			};
+			name = Debug;
+		};
+		04481A7926924D08007C9302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F794390C88AD0AE57F99BC11 /* Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K2TWK9B748;
+				INFOPLIST_FILE = zigzagIOSChallangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AmrsTests.test.zigzagIOSChallangeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = zigzagIOSChallange;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04481A4226924D03007C9302 /* Build configuration list for PBXProject "zigzagIOSChallange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04481A6F26924D08007C9302 /* Debug */,
+				04481A7026924D08007C9302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04481A7126924D08007C9302 /* Build configuration list for PBXNativeTarget "zigzagIOSChallange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04481A7226924D08007C9302 /* Debug */,
+				04481A7326924D08007C9302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04481A7426924D08007C9302 /* Build configuration list for PBXNativeTarget "zigzagIOSChallangeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04481A7526924D08007C9302 /* Debug */,
+				04481A7626924D08007C9302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04481A7726924D08007C9302 /* Build configuration list for PBXNativeTarget "zigzagIOSChallangeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04481A7826924D08007C9302 /* Debug */,
+				04481A7926924D08007C9302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04481A3F26924D03007C9302 /* Project object */;
+}

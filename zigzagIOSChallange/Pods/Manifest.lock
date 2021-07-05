@@ -1,0 +1,22 @@
+PODS:
+  - Alamofire (5.4.2)
+  - XMLMapper (2.0.0):
+    - XMLMapper/Core (= 2.0.0)
+  - XMLMapper/Core (2.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4)
+  - XMLMapper (~> 2.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - XMLMapper
+
+SPEC CHECKSUMS:
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
+  XMLMapper: 45ff16367092620b0b4adbc5e42dd8db6ebb5e0d
+
+PODFILE CHECKSUM: d4458cad71fd2a21f19986e97fcc857b0a78afa2
+
+COCOAPODS: 1.8.4

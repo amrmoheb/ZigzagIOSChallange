@@ -1,0 +1,6 @@
+framework module Pods_zigzagIOSChallange_zigzagIOSChallangeUITests {
+  umbrella header "Pods-zigzagIOSChallange-zigzagIOSChallangeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
