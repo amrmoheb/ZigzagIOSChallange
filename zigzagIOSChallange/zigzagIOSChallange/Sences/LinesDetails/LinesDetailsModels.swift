@@ -6,9 +6,13 @@
 //
 
 import Foundation
-enum  LinesDetails {
+
+enum  TransportationLinesDetails {
     struct Response {
         var LinesList = [StopEventResult]()
+    }
+    struct  LinesCoordsResponse {
+        var LinesCoordList = [[[Double]]]()
     }
     
 }
@@ -20,6 +24,14 @@ enum Display{
         var rbahan = false
         var sbahan = false
         
+    }
+}
+enum Perform {
+    enum GetLineDetails {
+        case Details
+    }
+    enum GetLineCoord {
+        case Coordinates
     }
 }
 enum Gleis: String
@@ -43,6 +55,9 @@ enum FiltersStates{
     case UBahan
     case RBahan
     case SBahan
+}
+enum Draw {
+    case Lines
 }
 
 

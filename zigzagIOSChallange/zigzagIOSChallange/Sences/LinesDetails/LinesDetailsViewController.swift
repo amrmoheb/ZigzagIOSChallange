@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import MapKit
 class LinesDetailsViewController: UIViewController {
     var presenter : LinesDetailsPresenterInput!
     enum CardState {
@@ -15,7 +15,8 @@ class LinesDetailsViewController: UIViewController {
     }
     
     var cardViewController:RedVIewController!//CardViewController!
-
+    @IBOutlet weak var mapView: MKMapView!
+    
     @IBOutlet weak var LinesListTableView: UITableView!
     
     @IBOutlet weak var CardHightConstrians: NSLayoutConstraint!
@@ -34,6 +35,7 @@ class LinesDetailsViewController: UIViewController {
     @IBOutlet weak var BusStack: UIStackView!
     @IBOutlet weak var BusLable: UILabel!
     
+    var MapCenter = CLLocationCoordinate2D()
     var cardHeight:CGFloat = 600
     let cardHandleAreaHeight:CGFloat = 65
     
@@ -58,7 +60,33 @@ class LinesDetailsViewController: UIViewController {
         presenter?.handle()
         // Do any additional setup after loading the view.
         setupCard()
+       
+        SetUpMap()
         
+    }
+    func SetUpMap()  {
+        mapView.delegate = self
+        
+        MapCenter.longitude = 9.21747//temp value
+        MapCenter.latitude = 48.80128//temp value
+        ReCenterMap(center: MapCenter)
+      
+    }
+    func ReCenterMap(center : CLLocationCoordinate2D) {
+        let regionRadius: CLLocationDistance = 10000
+
+        let coordinateRegion = MKCoordinateRegion(center: center,
+                                                  latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+            mapView.setRegion(coordinateRegion, animated: true)
+    }
+    func DrawLines(){
+        var LinesCount = presenter.GetDrawableLinesCount()
+        for i in 0...LinesCount-1 {
+            var drowableLineCoordinates = presenter.GetDrawableLineCoordsByIndex(index: i)
+            let polyline = MKPolyline(coordinates: drowableLineCoordinates, count: drowableLineCoordinates.count)
+            mapView.addOverlay(polyline)
+        }
+        ReCenterMap(center: MapCenter)
     }
     func setupCard() {
        
@@ -240,6 +268,10 @@ class LinesDetailsViewController: UIViewController {
 
 }
 extension LinesDetailsViewController : LinesDetailsPresenterOutput{
+    func display(draw : Draw) {
+        DrawLines()
+    }
+    
     func display(Filters: Display.Filters) {
         var filtersCount = 4
         if Filters.bus == false {
@@ -293,5 +325,19 @@ extension LinesDetailsViewController : UITableViewDelegate,UITableViewDataSource
         cell.PublishedLineName.text = presenter.GetPublishedLineNmaeByIndex(index: indexPath.row)
         cell.GateName.text = presenter.GetGateByIndex(index: indexPath.row)
         return cell
+    }
+}
+extension LinesDetailsViewController : MKMapViewDelegate
+{
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+
+        if let routePolyline = overlay as? MKPolyline {
+            let renderer = MKPolylineRenderer(polyline: routePolyline)
+            renderer.strokeColor = UIColor.blue
+            renderer.lineWidth = 7
+            return renderer
+        }
+
+        return MKOverlayRenderer()
     }
 }

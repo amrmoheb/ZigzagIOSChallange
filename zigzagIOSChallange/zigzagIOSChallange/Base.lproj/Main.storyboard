@@ -332,6 +332,7 @@
                         <outlet property="UBahanLable" destination="Q8y-k4-PsQ" id="vTh-P7-T6m"/>
                         <outlet property="UbahanStack" destination="HrV-h5-nH1" id="Wll-1G-QHV"/>
                         <outlet property="handleArea" destination="gU0-pu-nHd" id="uID-Xz-W2y"/>
+                        <outlet property="mapView" destination="DRP-34-ka0" id="RFs-n1-GHM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

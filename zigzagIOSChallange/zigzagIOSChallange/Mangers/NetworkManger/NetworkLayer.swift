@@ -67,6 +67,7 @@ class NetworkLayer {
             }
         
             do{
+            //    print(<#T##items: Any...##Any#>)
                 self.AnyModel =  try  JSONDecoder().decode(Model, from: data.data!)
 
 

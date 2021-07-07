@@ -11,7 +11,7 @@ import Foundation
 enum NetworkRouter
 {  static let baseURLString = ""
     case GetLinesData(String)
-   
+   case GetLinesCoordinate(String)
 
     func GetUrl() -> String {
         var relativePath = ""
@@ -21,6 +21,10 @@ enum NetworkRouter
              relativePath = "http://efastatic.vvs.de/zigzag/trias"
           
         
+        case .GetLinesCoordinate(let journeyRef):
+            //vvs:10001::H:j21:194
+            relativePath = "https://www2.vvs.de/smarths/XML_GEOOBJECT_REQUEST?SpEncId=0&coordOutputFormat=EPSG:4326&line=\(journeyRef)&outputFormat=rapidJSON&serverInfo=1&spTZO=1&stFaZon=1&vSL=0&version=10.2.10.139"
+
         }
         return NetworkRouter.baseURLString + relativePath
     }
@@ -30,6 +34,8 @@ enum NetworkRouter
         case .GetLinesData:
              return "XMLPost"
        
+        case .GetLinesCoordinate:
+            return "GET"
         }
     }
     func GetPostBodyInfo() -> String {
@@ -38,6 +44,8 @@ enum NetworkRouter
         case .GetLinesData( let stopPointRef):
              return stopPointRef
        
+        case .GetLinesCoordinate:
+           return ""
         }
 
     }

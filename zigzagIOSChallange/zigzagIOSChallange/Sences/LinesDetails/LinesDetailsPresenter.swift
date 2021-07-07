@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 class LinesDetailsPresenter {
     var interactor: LinesDetailsInteractorInput!
    weak var view : LinesDetailsPresenterOutput?
@@ -16,6 +17,8 @@ class LinesDetailsPresenter {
     var SBahanLinesArray = [StopEventResult]()
     var CurrentLinesArray = [StopEventResult]()
     
+    
+    var FullLinesCoordinates = [[[Double]]]()
     var BusFilterFlag = false
     var UBahanFilterFlag = false
     var RBahanFilterFlag = false
@@ -91,11 +94,17 @@ class LinesDetailsPresenter {
 }
 extension LinesDetailsPresenter: LinesDetailsInteractorOutput
 {
-    func present(LinesData: LinesDetails.Response) {
+    func present(LinesCoordsData : TransportationLinesDetails.LinesCoordsResponse) {
+        FullLinesCoordinates = LinesCoordsData.LinesCoordList
+        view?.display(draw: Draw.Lines)
+    }
+    
+    func present(LinesData: TransportationLinesDetails.Response) {
         FullLinesArray = LinesData.LinesList
         CurrentLinesArray = FullLinesArray
         FillLinesBasedOnCategory()
         print("present interactor output in presenter")
+        interactor.perform(LinesDetails: Perform.GetLineCoord.Coordinates)
         view?.display(reloadLinesList: Display.reloadList)
     }
     
@@ -103,8 +112,24 @@ extension LinesDetailsPresenter: LinesDetailsInteractorOutput
     
     
 }
+
 extension LinesDetailsPresenter: LinesDetailsPresenterInput
 {
+    func GetDrawableLineCoordsByIndex(index: Int) -> [CLLocationCoordinate2D] {
+        var DrowableLineCoord = [CLLocationCoordinate2D]()
+        for i in 0...FullLinesCoordinates[index].count-1 {
+            var locationCoord = CLLocationCoordinate2D()
+            locationCoord.latitude = FullLinesCoordinates[index][i][0]
+            locationCoord.longitude = FullLinesCoordinates[index][i][1]
+            DrowableLineCoord.append(locationCoord)
+        }
+        return DrowableLineCoord
+    }
+    
+    func GetDrawableLinesCount() -> Int {
+        return FullLinesCoordinates.count
+    }
+    
     func FilterSelected(filterState: FiltersStates) {
         switch filterState {
         case .Bus:
@@ -155,7 +180,7 @@ extension LinesDetailsPresenter: LinesDetailsPresenterInput
     
     func handle() {
         print("handle view task in presenter")
-        interactor.perform()
+        interactor.perform(LinesDetails: Perform.GetLineDetails.Details)
     }
     func GetLineNameByIndex(index : Int) -> String {
         
