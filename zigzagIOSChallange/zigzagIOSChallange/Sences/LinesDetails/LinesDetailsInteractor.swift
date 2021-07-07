@@ -17,7 +17,7 @@ extension LinesDetailsInteractor : LinesDetailsInteractorInput
 {
     func perform() {
         print("perform interactor task")
-        let stopPointRef = "de:08111:6333"
+        let stopPointRef =  "de:08111:6333"
         networkManger.XMLPostRequest(Model: Routes.self, RequestConfiq: NetworkRouter.GetLinesData(stopPointRef), completionHandler:   {
            respose,State in
                      //    print(respose)

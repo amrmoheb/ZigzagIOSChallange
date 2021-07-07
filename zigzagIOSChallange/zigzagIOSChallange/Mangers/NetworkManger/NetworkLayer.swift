@@ -111,6 +111,7 @@ class NetworkLayer {
                     case .success(_):
                         let stringResponse: String = String(data: response.data!, encoding: String.Encoding.utf8) as String? ?? ""
                         print("Success")
+                        print(stringResponse)
                         if response.data == nil || stringResponse == ""
                                   {
                                       print("NoData")

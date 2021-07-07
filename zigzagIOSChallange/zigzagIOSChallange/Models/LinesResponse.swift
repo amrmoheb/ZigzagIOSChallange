@@ -103,15 +103,29 @@ class StopEventResult: XMLMappable {
 class StopEvent: XMLMappable {
     var nodeName: String!
     
+    var thisCall: ThisCall?
     var service: Service?
+    
+
+    required init?(map: XMLMap) {}
+
+    func mapping(map: XMLMap) {
+        thisCall <- map["trias:ThisCall"]
+        service <- map["trias:Service"]
+
+        
+    }
+}
+class ThisCall: XMLMappable {
+    var nodeName: String!
+    
     var callAtStop: CallAtStop?
+    
 
     required init?(map: XMLMap) {}
 
     func mapping(map: XMLMap) {
         callAtStop <- map["trias:CallAtStop"]
-        service <- map["trias:Service"]
-
         
     }
 }
@@ -205,15 +219,16 @@ class Name: XMLMappable {
 
 class CallAtStop: XMLMappable {
     var nodeName: String!
-
-    var serviceDeparture: ServiceDeparture?
     var plannedBay:PlannedBay?
+    var serviceDeparture: ServiceDeparture?
+   
 
     required init?(map: XMLMap) {}
 
     func mapping(map: XMLMap) {
-        serviceDeparture <- map["trias:ServiceDeparture"]
         plannedBay <- map["trias:PlannedBay"]
+        serviceDeparture <- map["trias:ServiceDeparture"]
+        
 
         
     }

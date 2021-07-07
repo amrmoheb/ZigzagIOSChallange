@@ -20,6 +20,20 @@ class LinesDetailsViewController: UIViewController {
     
     @IBOutlet weak var CardHightConstrians: NSLayoutConstraint!
     
+    @IBOutlet weak var FiltersStack: UIStackView!
+    @IBOutlet weak var SBahanStack: UIStackView!
+    
+    @IBOutlet weak var SBahanLable: UILabel!
+    
+    @IBOutlet weak var RbahanStack: UIStackView!
+    
+    @IBOutlet weak var RBahanLable: UILabel!
+    @IBOutlet weak var UbahanStack: UIStackView!
+    
+    @IBOutlet weak var UBahanLable: UILabel!
+    @IBOutlet weak var BusStack: UIStackView!
+    @IBOutlet weak var BusLable: UILabel!
+    
     var cardHeight:CGFloat = 600
     let cardHandleAreaHeight:CGFloat = 65
     
@@ -44,7 +58,7 @@ class LinesDetailsViewController: UIViewController {
         presenter?.handle()
         // Do any additional setup after loading the view.
         setupCard()
-
+        
     }
     func setupCard() {
        
@@ -67,9 +81,38 @@ class LinesDetailsViewController: UIViewController {
      handleArea.addGestureRecognizer(panGestureRecognizer)
         
      //   CardContaentSetup()
-        
+       // BusStack.isHidden = true
+        let BusGesture = UITapGestureRecognizer(target: self, action:  #selector(self.BusSelected))
+        self.BusStack.addGestureRecognizer(BusGesture)
+        let UBahanGesture = UITapGestureRecognizer(target: self, action:  #selector(self.UBahanSelected))
+        self.UbahanStack.addGestureRecognizer(UBahanGesture)
+        let RBahanGesture = UITapGestureRecognizer(target: self, action:  #selector(self.RBahanSelected))
+        self.RbahanStack.addGestureRecognizer(RBahanGesture)
+        let SBahanGesture = UITapGestureRecognizer(target: self, action:  #selector(self.SBahanSelected))
+        self.SBahanStack.addGestureRecognizer(SBahanGesture)
+        FiltersStack.isHidden = true
         
     }
+  @objc  func BusSelected()  {
+    print("BusSelected")
+    presenter.FilterSelected(filterState: .Bus)
+    }
+    @objc  func UBahanSelected()  {
+        print("UBahanSelected")
+        presenter.FilterSelected(filterState: .UBahan)
+
+
+      }
+    @objc  func RBahanSelected()  {
+        print("RBahanSelected")
+        presenter.FilterSelected(filterState: .RBahan)
+
+      }
+    @objc  func SBahanSelected()  {
+        print("SBahanSelected")
+        presenter.FilterSelected(filterState: .SBahan)
+
+      }
     func CardContaentSetup()  {
      /*   let imageView = UIImageView()
         imageView.backgroundColor = UIColor.blue
@@ -197,6 +240,38 @@ class LinesDetailsViewController: UIViewController {
 
 }
 extension LinesDetailsViewController : LinesDetailsPresenterOutput{
+    func display(Filters: Display.Filters) {
+        var filtersCount = 4
+        if Filters.bus == false {
+            BusStack.isHidden = true
+            filtersCount -= 1
+        }
+        if Filters.ubahan == false {
+            UbahanStack.isHidden = true
+            filtersCount -= 1
+
+        }
+        if Filters.rbahan == false {
+            RbahanStack.isHidden = true
+            filtersCount -= 1
+
+        }
+        if Filters.sbahan == false {
+            SBahanStack.isHidden = true
+            filtersCount -= 1
+
+        }
+        if Filters.bus && Filters.rbahan && Filters.ubahan && Filters.sbahan {
+            BusLable.isHidden = true
+            UBahanLable.isHidden = true
+            RBahanLable.isHidden = true
+            SBahanLable.isHidden = true
+        }
+        if filtersCount > 1 {
+            FiltersStack.isHidden = false
+        }
+    }
+    
     
     func display(reloadLinesList : Display) {
         LinesListTableView.reloadData()
@@ -212,6 +287,11 @@ extension LinesDetailsViewController : UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "LineCell") as! LineTableViewCell
         cell.SetLineName(name: presenter.GetLineNameByIndex(index: indexPath.row))
+        cell.ArrivalTimeLable.text = presenter.GetArriveTimeByIndex(index: indexPath.row)
+        print(presenter.GetArriveTimeByIndex(index: indexPath.row))
+        cell.EstimatedTmeLable.text = presenter.GetEstimatedTimeByIndex(index: indexPath.row)
+        cell.PublishedLineName.text = presenter.GetPublishedLineNmaeByIndex(index: indexPath.row)
+        cell.GateName.text = presenter.GetGateByIndex(index: indexPath.row)
         return cell
     }
 }

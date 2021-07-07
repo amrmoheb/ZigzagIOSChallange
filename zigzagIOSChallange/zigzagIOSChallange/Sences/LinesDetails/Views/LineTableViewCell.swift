@@ -11,9 +11,18 @@ class LineTableViewCell: UITableViewCell {
 
     @IBOutlet weak var LineName: UILabel!
     
+    @IBOutlet weak var EstimatedTmeLable: UILabel!
+    @IBOutlet weak var ArrivalTimeLable: UILabel!
+    
+    @IBOutlet weak var PublishedLineName: UILabel!
+    @IBOutlet weak var OriginName: UILabel!
+    
+    @IBOutlet weak var GateName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+     //  EstimatedTmeLable.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
