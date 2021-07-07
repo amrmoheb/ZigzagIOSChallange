@@ -17,6 +17,7 @@ protocol LinesDetailsPresenterInput {
     func GetDrawableLineCoordsByIndex(index : Int) -> [CLLocationCoordinate2D]
     func GetDrawableLinesCount() -> Int
     func GetLineCount() -> Int
+    func setStopRefPoint(value : String)
     func FilterSelected (filterState : FiltersStates) 
 }
 protocol LinesDetailsPresenterOutput: class {

@@ -1,22 +1,20 @@
 //
-//  RedVIewController.swift
+//  CitesViewController.swift
 //  zigzagIOSChallange
 //
-//  Created by Mac on 7/5/21.
+//  Created by Mac on 7/7/21.
 //
 
 import UIKit
 
-class RedVIewController: UIViewController {
-    @IBOutlet weak var TransportationCategoryStack: UIStackView!
-    @IBOutlet weak var handleArea: UIImageView!
-    
+class CitesViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
- 
+    
 
     /*
     // MARK: - Navigation

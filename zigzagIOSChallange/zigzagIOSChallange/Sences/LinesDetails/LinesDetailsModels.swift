@@ -27,11 +27,11 @@ enum Display{
     }
 }
 enum Perform {
-    enum GetLineDetails {
-        case Details
+    struct GetLineDetails {
+        var StopPointRef = ""
     }
-    enum GetLineCoord {
-        case Coordinates
+    struct GetLineCoord {
+        var journeyRef = ""
     }
 }
 enum Gleis: String

@@ -25,14 +25,14 @@
 		04481AB326931C5A007C9302 /* LinesDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AB226931C5A007C9302 /* LinesDetailsInteractor.swift */; };
 		04481AB826931CB0007C9302 /* LinesDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AB726931CB0007C9302 /* LinesDetailsProtocols.swift */; };
 		04481ABD2693266A007C9302 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481ABC26932669007C9302 /* Router.swift */; };
-		04481ACA26935345007C9302 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04481AC826935345007C9302 /* CardViewController.xib */; };
-		04481AD526935CB2007C9302 /* TransportationCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04481AD326935CB2007C9302 /* TransportationCategoryView.xib */; };
-		04481AD626935CB2007C9302 /* TransportationCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AD426935CB2007C9302 /* TransportationCategoryViewController.swift */; };
-		04481AE426936551007C9302 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AE326936551007C9302 /* CardViewController.swift */; };
 		04481AFC26936894007C9302 /* LineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481AFB26936894007C9302 /* LineTableViewCell.swift */; };
-		04481B0126936D88007C9302 /* RedVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481B0026936D88007C9302 /* RedVIewController.swift */; };
 		04481B062693B668007C9302 /* LinesDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481B052693B668007C9302 /* LinesDetailsModels.swift */; };
 		04481B132695AC9B007C9302 /* LinesCoordinatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481B122695AC9B007C9302 /* LinesCoordinatesResponse.swift */; };
+		04481B3C26961406007C9302 /* StationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481B3B26961406007C9302 /* StationsTableViewController.swift */; };
+		04481B6226961807007C9302 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481B6126961807007C9302 /* StationModel.swift */; };
+		04481B7226963D94007C9302 /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04481B6C26963D05007C9302 /* CircularStd-Bold.otf */; };
+		04481B7326963D94007C9302 /* CircularStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04481B6E26963D05007C9302 /* CircularStd-Medium.otf */; };
+		04481B7426963D94007C9302 /* CircularStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04481B6D26963D05007C9302 /* CircularStd-Book.otf */; };
 		4B38F9AA4468A6AC74E59206 /* Pods_zigzagIOSChallange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B858B967A09B0E4E910BD3 /* Pods_zigzagIOSChallange.framework */; };
 		4D420DEF980FDAD34F44E30F /* Pods_zigzagIOSChallange_zigzagIOSChallangeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669649880525FC2E4D061E1E /* Pods_zigzagIOSChallange_zigzagIOSChallangeUITests.framework */; };
 		65DB19D857835A72AA709AFA /* Pods_zigzagIOSChallangeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3FE5D50EBD870EA116B1D /* Pods_zigzagIOSChallangeTests.framework */; };
@@ -80,14 +80,14 @@
 		04481AB226931C5A007C9302 /* LinesDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesDetailsInteractor.swift; sourceTree = "<group>"; };
 		04481AB726931CB0007C9302 /* LinesDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesDetailsProtocols.swift; sourceTree = "<group>"; };
 		04481ABC26932669007C9302 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		04481AC826935345007C9302 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
-		04481AD326935CB2007C9302 /* TransportationCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransportationCategoryView.xib; sourceTree = "<group>"; };
-		04481AD426935CB2007C9302 /* TransportationCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportationCategoryViewController.swift; sourceTree = "<group>"; };
-		04481AE326936551007C9302 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		04481AFB26936894007C9302 /* LineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTableViewCell.swift; sourceTree = "<group>"; };
-		04481B0026936D88007C9302 /* RedVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedVIewController.swift; sourceTree = "<group>"; };
 		04481B052693B668007C9302 /* LinesDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesDetailsModels.swift; sourceTree = "<group>"; };
 		04481B122695AC9B007C9302 /* LinesCoordinatesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesCoordinatesResponse.swift; sourceTree = "<group>"; };
+		04481B3B26961406007C9302 /* StationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsTableViewController.swift; sourceTree = "<group>"; };
+		04481B6126961807007C9302 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
+		04481B6C26963D05007C9302 /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
+		04481B6D26963D05007C9302 /* CircularStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.otf"; sourceTree = "<group>"; };
+		04481B6E26963D05007C9302 /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.otf"; sourceTree = "<group>"; };
 		0F640063549EA4A927CFDE04 /* Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.debug.xcconfig"; path = "Target Support Files/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests/Pods-zigzagIOSChallange-zigzagIOSChallangeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		52B858B967A09B0E4E910BD3 /* Pods_zigzagIOSChallange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zigzagIOSChallange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A3FE5D50EBD870EA116B1D /* Pods_zigzagIOSChallangeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zigzagIOSChallangeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +152,7 @@
 		04481A4926924D03007C9302 /* zigzagIOSChallange */ = {
 			isa = PBXGroup;
 			children = (
+				04481B6626963CA9007C9302 /* Fonts */,
 				04481AC126932680007C9302 /* Coordinator */,
 				04481A9926926950007C9302 /* Models */,
 				04481A8026924DB3007C9302 /* Mangers */,
@@ -188,6 +189,7 @@
 		04481A7D26924D2D007C9302 /* Sences */ = {
 			isa = PBXGroup;
 			children = (
+				04481B2726961106007C9302 /* Cites */,
 				04481AA726927170007C9302 /* LinesDetails */,
 			);
 			path = Sences;
@@ -225,6 +227,7 @@
 				04481A9A269269E6007C9302 /* LinesPostRequest.swift */,
 				04481A9F26926A55007C9302 /* LinesResponse.swift */,
 				04481B122695AC9B007C9302 /* LinesCoordinatesResponse.swift */,
+				04481B6126961807007C9302 /* StationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,14 +256,27 @@
 		04481ACF2693534B007C9302 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04481AD326935CB2007C9302 /* TransportationCategoryView.xib */,
-				04481AD426935CB2007C9302 /* TransportationCategoryViewController.swift */,
-				04481AC826935345007C9302 /* CardViewController.xib */,
-				04481AE326936551007C9302 /* CardViewController.swift */,
 				04481AFB26936894007C9302 /* LineTableViewCell.swift */,
-				04481B0026936D88007C9302 /* RedVIewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		04481B2726961106007C9302 /* Cites */ = {
+			isa = PBXGroup;
+			children = (
+				04481B3B26961406007C9302 /* StationsTableViewController.swift */,
+			);
+			path = Cites;
+			sourceTree = "<group>";
+		};
+		04481B6626963CA9007C9302 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04481B6C26963D05007C9302 /* CircularStd-Bold.otf */,
+				04481B6D26963D05007C9302 /* CircularStd-Book.otf */,
+				04481B6E26963D05007C9302 /* CircularStd-Medium.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		BBDC30D37E8A251F05103BBC /* Pods */ = {
@@ -394,11 +410,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04481ACA26935345007C9302 /* CardViewController.xib in Resources */,
-				04481AD526935CB2007C9302 /* TransportationCategoryView.xib in Resources */,
+				04481B7226963D94007C9302 /* CircularStd-Bold.otf in Resources */,
+				04481B7426963D94007C9302 /* CircularStd-Book.otf in Resources */,
 				04481A5726924D07007C9302 /* LaunchScreen.storyboard in Resources */,
 				04481A5426924D07007C9302 /* Assets.xcassets in Resources */,
 				04481A5226924D03007C9302 /* Main.storyboard in Resources */,
+				04481B7326963D94007C9302 /* CircularStd-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,17 +543,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04481B3C26961406007C9302 /* StationsTableViewController.swift in Sources */,
+				04481B6226961807007C9302 /* StationModel.swift in Sources */,
 				04481AA026926A55007C9302 /* LinesResponse.swift in Sources */,
 				04481AAE26931C3F007C9302 /* LinesDetailsPresenter.swift in Sources */,
 				04481A4F26924D03007C9302 /* ViewController.swift in Sources */,
-				04481AD626935CB2007C9302 /* TransportationCategoryViewController.swift in Sources */,
 				04481A8726924EBC007C9302 /* NetworkRouter.swift in Sources */,
 				04481AB826931CB0007C9302 /* LinesDetailsProtocols.swift in Sources */,
-				04481B0126936D88007C9302 /* RedVIewController.swift in Sources */,
 				04481AB326931C5A007C9302 /* LinesDetailsInteractor.swift in Sources */,
 				04481A9B269269E6007C9302 /* LinesPostRequest.swift in Sources */,
 				04481B132695AC9B007C9302 /* LinesCoordinatesResponse.swift in Sources */,
-				04481AE426936551007C9302 /* CardViewController.swift in Sources */,
 				04481B062693B668007C9302 /* LinesDetailsModels.swift in Sources */,
 				04481A4B26924D03007C9302 /* AppDelegate.swift in Sources */,
 				04481A8826924EBC007C9302 /* NetworkLayer.swift in Sources */,
@@ -724,6 +740,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2TWK9B748;
 				INFOPLIST_FILE = zigzagIOSChallange/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -744,6 +761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2TWK9B748;
 				INFOPLIST_FILE = zigzagIOSChallange/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

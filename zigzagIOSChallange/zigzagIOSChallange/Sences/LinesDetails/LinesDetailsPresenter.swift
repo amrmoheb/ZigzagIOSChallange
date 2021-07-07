@@ -23,6 +23,8 @@ class LinesDetailsPresenter {
     var UBahanFilterFlag = false
     var RBahanFilterFlag = false
     var SBahanFilterFlag = false
+    
+    var stopRefPoint = ""
     func GetTimeFromDate(dateStr : String) -> String {
         let dateFormatter = DateFormatter()
          dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -104,7 +106,10 @@ extension LinesDetailsPresenter: LinesDetailsInteractorOutput
         CurrentLinesArray = FullLinesArray
         FillLinesBasedOnCategory()
         print("present interactor output in presenter")
-        interactor.perform(LinesDetails: Perform.GetLineCoord.Coordinates)
+        var request = Perform.GetLineCoord()
+        request.journeyRef = CurrentLinesArray[0].stopEvent?.service?.journeyRef ?? ""
+        print(request.journeyRef)
+        interactor.perform(LinesDetails: request)
         view?.display(reloadLinesList: Display.reloadList)
     }
     
@@ -115,6 +120,10 @@ extension LinesDetailsPresenter: LinesDetailsInteractorOutput
 
 extension LinesDetailsPresenter: LinesDetailsPresenterInput
 {
+    func setStopRefPoint(value: String) {
+        stopRefPoint = value
+    }
+    
     func GetDrawableLineCoordsByIndex(index: Int) -> [CLLocationCoordinate2D] {
         var DrowableLineCoord = [CLLocationCoordinate2D]()
         for i in 0...FullLinesCoordinates[index].count-1 {
@@ -143,6 +152,10 @@ extension LinesDetailsPresenter: LinesDetailsPresenterInput
         default:
             CurrentLinesArray = FullLinesArray
         }
+        var request = Perform.GetLineCoord()
+        request.journeyRef = CurrentLinesArray[0].stopEvent?.service?.journeyRef ?? ""
+        print(request.journeyRef)
+        interactor.perform(LinesDetails: request)
         view?.display(reloadLinesList: Display.reloadList)
     }
     
@@ -180,7 +193,9 @@ extension LinesDetailsPresenter: LinesDetailsPresenterInput
     
     func handle() {
         print("handle view task in presenter")
-        interactor.perform(LinesDetails: Perform.GetLineDetails.Details)
+        var request = Perform.GetLineDetails()
+        request.StopPointRef = stopRefPoint
+        interactor.perform(LinesDetails: request)
     }
     func GetLineNameByIndex(index : Int) -> String {
         

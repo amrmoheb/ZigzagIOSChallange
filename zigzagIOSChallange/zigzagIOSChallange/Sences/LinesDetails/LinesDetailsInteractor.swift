@@ -17,7 +17,8 @@ extension LinesDetailsInteractor : LinesDetailsInteractorInput
 {
     
     func perform(LinesDetails: Perform.GetLineCoord) {
-        let journeyRef = "vvs:10001::H:j21:194"
+        let journeyRef =  LinesDetails.journeyRef//"vvs:10001::H:j21:194"
+        print(journeyRef)
         networkManger.GetRequest(Model: LinesCoordinatesResponse.self, RequestConfiq: NetworkRouter.GetLinesCoordinate(journeyRef), completionHandler:   {
            respose,State in
                      //    print(respose)
@@ -47,8 +48,8 @@ extension LinesDetailsInteractor : LinesDetailsInteractorInput
     })
         }
     func perform(LinesDetails: Perform.GetLineDetails) {
-        print("perform interactor task")
-        let stopPointRef =  "de:08111:6333"
+        print(LinesDetails.StopPointRef)
+        let stopPointRef =  LinesDetails.StopPointRef// "de:08111:6333"
         networkManger.XMLPostRequest(Model: Routes.self, RequestConfiq: NetworkRouter.GetLinesData(stopPointRef), completionHandler:   {
            respose,State in
                      //    print(respose)

@@ -13,8 +13,11 @@ class LinesDetailsViewController: UIViewController {
         case expanded
         case collapsed
     }
-    
-    var cardViewController:RedVIewController!//CardViewController!
+    var LineColor = #colorLiteral(red: 0.09019607843, green: 0.6392156863, blue: 0.2705882353, alpha: 1)
+    var polyline = MKPolyline()
+    var station = Station()
+   // var cardViewController:RedVIewController!
+    var UndeLineView : UIView!
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var LinesListTableView: UITableView!
@@ -34,6 +37,8 @@ class LinesDetailsViewController: UIViewController {
     @IBOutlet weak var UBahanLable: UILabel!
     @IBOutlet weak var BusStack: UIStackView!
     @IBOutlet weak var BusLable: UILabel!
+    @IBOutlet weak var StationImage: UIImageView!
+    @IBOutlet weak var StationName: UILabel!
     
     var MapCenter = CLLocationCoordinate2D()
     var cardHeight:CGFloat = 600
@@ -57,7 +62,7 @@ class LinesDetailsViewController: UIViewController {
         MainPresenter.interactor = MainInteractor
         MainInteractor.presenter = MainPresenter
         presenter = MainPresenter
-        presenter?.handle()
+    
         // Do any additional setup after loading the view.
         setupCard()
        
@@ -67,8 +72,7 @@ class LinesDetailsViewController: UIViewController {
     func SetUpMap()  {
         mapView.delegate = self
         
-        MapCenter.longitude = 9.21747//temp value
-        MapCenter.latitude = 48.80128//temp value
+       
         ReCenterMap(center: MapCenter)
       
     }
@@ -80,17 +84,18 @@ class LinesDetailsViewController: UIViewController {
             mapView.setRegion(coordinateRegion, animated: true)
     }
     func DrawLines(){
+        mapView.removeOverlays(mapView.overlays)
         var LinesCount = presenter.GetDrawableLinesCount()
         for i in 0...LinesCount-1 {
             var drowableLineCoordinates = presenter.GetDrawableLineCoordsByIndex(index: i)
-            let polyline = MKPolyline(coordinates: drowableLineCoordinates, count: drowableLineCoordinates.count)
+             polyline = MKPolyline(coordinates: drowableLineCoordinates, count: drowableLineCoordinates.count)
             mapView.addOverlay(polyline)
         }
         ReCenterMap(center: MapCenter)
     }
     func setupCard() {
        
-        cardHeight = (self.view.frame.height/3)*2
+        cardHeight =  (self.view.frame.height/3)*2
        // cardViewController =  CardView// CardViewController(nibName:"CardViewController", bundle:nil)
        // self.addChild(CardView)
         self.view.addSubview(CardView)
@@ -119,65 +124,41 @@ class LinesDetailsViewController: UIViewController {
         let SBahanGesture = UITapGestureRecognizer(target: self, action:  #selector(self.SBahanSelected))
         self.SBahanStack.addGestureRecognizer(SBahanGesture)
         FiltersStack.isHidden = true
+        StationImage.image = UIImage(named: station.ImageName)
+        StationName.text = station.StationName
+        MapCenter.longitude = station.Stationlongitude
+        MapCenter.latitude = station.Stationlatitude
+        presenter.setStopRefPoint(value: station.StopPointRef)
+        presenter?.handle()
         
     }
+ 
   @objc  func BusSelected()  {
     print("BusSelected")
+    LineColor = UIColor.red
     presenter.FilterSelected(filterState: .Bus)
     }
     @objc  func UBahanSelected()  {
         print("UBahanSelected")
+        LineColor = #colorLiteral(red: 0, green: 0.6196078431, blue: 0.8862745098, alpha: 1)
         presenter.FilterSelected(filterState: .UBahan)
 
 
       }
     @objc  func RBahanSelected()  {
         print("RBahanSelected")
+        LineColor = UIColor.gray
         presenter.FilterSelected(filterState: .RBahan)
 
       }
     @objc  func SBahanSelected()  {
         print("SBahanSelected")
+        LineColor = #colorLiteral(red: 0.09019607843, green: 0.6392156863, blue: 0.2705882353, alpha: 1)
         presenter.FilterSelected(filterState: .SBahan)
 
       }
-    func CardContaentSetup()  {
-     /*   let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.blue
-        imageView.heightAnchor.constraint(equalToConstant: 120.0).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 120.0).isActive = true
-        imageView.image = UIImage(named: "buttonFollowCheckGreen")
+   
 
-        //Text Label
-        let textLabel = UILabel()
-        textLabel.backgroundColor = UIColor.yellow
-        textLabel.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
-        textLabel.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
-        textLabel.text  = "Hi World"
-        textLabel.textAlignment = .center
-        */
-        // nib
-        for i in 0...2 {
-               CreateStackCell()
-        }
-
- 
-        
-    }
-    func CreateStackCell()
-    {
-        
-       let transType = TransportationCategoryViewController(nibName:"TransportationCategoryView", bundle:nil)
-
-       // self.cardViewController.TransportationCategoryStack.addChild(transportationView)
-     //   self.addChild(transType)
-       self.view.addSubview(transType.view)
-        transType.Logo.image = UIImage(named: "buttonFollowCheckGreen")
-        transType.Name.text = "bus"
-       self.cardViewController.TransportationCategoryStack.addArrangedSubview(transType.view)
-      
-
-    }
     @objc
     func handleCardTap(recognzier:UITapGestureRecognizer) {
         switch recognzier.state {
@@ -324,6 +305,7 @@ extension LinesDetailsViewController : UITableViewDelegate,UITableViewDataSource
         cell.EstimatedTmeLable.text = presenter.GetEstimatedTimeByIndex(index: indexPath.row)
         cell.PublishedLineName.text = presenter.GetPublishedLineNmaeByIndex(index: indexPath.row)
         cell.GateName.text = presenter.GetGateByIndex(index: indexPath.row)
+        cell.PublishedLineVIew.backgroundColor = LineColor
         return cell
     }
 }
@@ -333,7 +315,7 @@ extension LinesDetailsViewController : MKMapViewDelegate
 
         if let routePolyline = overlay as? MKPolyline {
             let renderer = MKPolylineRenderer(polyline: routePolyline)
-            renderer.strokeColor = UIColor.blue
+            renderer.strokeColor = LineColor
             renderer.lineWidth = 7
             return renderer
         }

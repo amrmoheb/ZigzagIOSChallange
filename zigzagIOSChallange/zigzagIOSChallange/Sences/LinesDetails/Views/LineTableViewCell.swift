@@ -14,6 +14,7 @@ class LineTableViewCell: UITableViewCell {
     @IBOutlet weak var EstimatedTmeLable: UILabel!
     @IBOutlet weak var ArrivalTimeLable: UILabel!
     
+    @IBOutlet weak var PublishedLineVIew: UIView!
     @IBOutlet weak var PublishedLineName: UILabel!
     @IBOutlet weak var OriginName: UILabel!
     
@@ -21,6 +22,7 @@ class LineTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        PublishedLineVIew.layer.cornerRadius = 10
         // Initialization code
      //  EstimatedTmeLable.isHidden = true
     }
@@ -32,6 +34,7 @@ class LineTableViewCell: UITableViewCell {
     }
     func SetLineName(name : String)  {
         LineName.text = name
+        
     }
 
 }
